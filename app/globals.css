@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+@import 'tailwindcss';
+
+:root {
+  --background: #090c0e;
+  --foreground: #edf3f4;
+  --card: #101619;
+  --muted: #8b999b;
+  --line: rgba(199, 224, 225, .11);
+  --lime: #c6ff73;
+  --cyan: #7de3e7;
+  --pink: #ff9cc2;
+  --amber: #ffc66e;
+  --mono: 'DM Mono', monospace;
+  --font-brand: 'Space Grotesk', sans-serif;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-brand);
+}
+
+* { box-sizing: border-box; }
+html { min-width: 320px; background: var(--background); }
+body { margin: 0; min-height: 100vh; color: var(--foreground); font-family: var(--font-brand); background: radial-gradient(ellipse at 55% -20%, rgba(30, 106, 102, .22), transparent 38%), var(--background); }
+button, input, textarea, select { font: inherit; }
+button { color: inherit; }
+::selection { background: var(--lime); color: #10150c; }
+*:focus-visible { outline: 2px solid var(--lime); outline-offset: 3px; }
